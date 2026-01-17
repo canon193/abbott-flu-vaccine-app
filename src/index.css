@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lato:wght@300;400;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-border: 0 0% 85%;
+    --color-input: 0 0% 85%;
+    --color-ring: 28 90% 48%;
+    --color-background: 0 0% 100%;
+    --color-foreground: 230 65% 21%;
+    
+    --color-primary: 28 90% 48%;
+    --color-primary-foreground: 0 0% 100%;
+    --color-primary-hover: 28 90% 42%;
+    --color-primary-active: 28 90% 38%;
+    
+    --color-secondary: 28 100% 95%;
+    --color-secondary-foreground: 28 90% 48%;
+    --color-secondary-hover: 28 100% 90%;
+    --color-secondary-active: 28 100% 85%;
+    
+    --color-tertiary: 210 80% 45%;
+    --color-tertiary-foreground: 0 0% 100%;
+    
+    --color-accent: 33 100% 88%;
+    --color-accent-foreground: 28 90% 40%;
+    
+    --color-success: 122 39% 49%;
+    --color-success-foreground: 122 40% 98%;
+    
+    --color-warning: 41 100% 45%;
+    --color-warning-foreground: 41 100% 98%;
+    
+    --color-error: 2 80% 45%;
+    --color-error-foreground: 2 80% 98%;
+    
+    --color-info: 202 100% 39%;
+    --color-info-foreground: 202 100% 97%;
+    
+    --color-muted: 0 0% 95%;
+    --color-muted-foreground: 0 0% 45%;
+    
+    --color-card: 0 0% 100%;
+    --color-card-foreground: 230 65% 21%;
+    
+    --font-sans: "DM Sans", sans-serif;
+    --font-body: "Lato", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  html,
+  body {
+    @apply bg-background text-foreground font-body;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-foreground;
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .min-touch-target {
+    min-width: 56px;
+    min-height: 56px;
+  }
+}
